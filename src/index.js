@@ -1,40 +1,7 @@
 import ReactDOM from 'react-dom';
-import users from './user.json';
+import App from './App';
 
-const data = users[0];
-
-const user = (
-  <div class="profile">
-    <div class="description">
-      <img
-        src={data.avatar}
-        alt={data.username}
-        class="avatar"
-      />
-      <p class="name">{data.username}</p>
-      <p class="tag">{data.tag}</p>
-      <p class="location">{data.location}</p>
-    </div>
-
-    <ul class="stats">
-      <li>
-        <span class="label">Followers</span>
-        <span class="quantity">{data.stats.followers}</span>
-      </li>
-      <li>
-        <span class="label">Views</span>
-        <span class="quantity">{data.stats.views}</span>
-      </li>
-      <li>
-        <span class="label">Likes</span>
-        <span class="quantity">{data.stats.likes}</span>
-      </li>
-    </ul>
-  </div>
-);
-
-ReactDOM.render(user, document.querySelector('#root'));
-
+ReactDOM.render(<App />, document.querySelector('#root'));
 
 // import { App } from 'components/App';
 // import reportWebVitals from './reportWebVitals';
